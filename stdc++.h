@@ -7,7 +7,7 @@
 // Visit https://gist.github.com/raydwaipayan/a48ef18210ee07f8b3d34b114b395b46 (for the original file I used)
 
 // For lazy people
-// #define _SILENCE_CXX17_C_HEADER_DEPRECATION_WARNINS // or _SILENCE_CXX17_C_HEADER_DEPRECATION_WARNING
+// #define _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS // or _SILENCE_CXX17_C_HEADER_DEPRECATION_WARNING
 // #define _CRT_SECURE_NO_WARNINGS 
 
 #ifndef MY_CPLUSPLUS 
@@ -41,14 +41,17 @@
 #include <cwctype>
 
 #if MY_CPLUSPLUS >= 201103L
-#include <ccomplex>
 #include <cfenv>
 #include <cinttypes>
+#include <cstdint>
+#include <cuchar>
+#endif
+
+#if MY_CPLUSPLUS < 201703L || defined _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS
+#include <ccomplex>
 #include <cstdalign>
 #include <cstdbool>
-#include <cstdint>
 #include <ctgmath>
-#include <cuchar>
 #endif
 
 // C++
