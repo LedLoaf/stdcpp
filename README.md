@@ -9,4 +9,5 @@ Originally, this file wasn't reading the specific set C++ Language Standard in V
 Adding the ***MY_CPLUSPLUS*** defines allowed it to work correctly for me. <br />
 Visit https://gist.github.com/raydwaipayan/a48ef18210ee07f8b3d34b114b395b46 *(for the original file I used)*  <br />
 
-This file isn't recommended to use because it's bad practice including the whole standard library. But I find this useful when making concepts and trying things out. <br />
+This file isn't recommended to use because it's bad practice including the whole standard library. But I find this useful when making concepts and trying things out. <br />\
+This file is literally for people who are lazy and don't want to type out headers and I've even included some common preprocessor definitions to simply copy and paste. o_O
