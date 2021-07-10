@@ -6,6 +6,10 @@
 // Adding the ***MY_CPLUSPLUS*** defines allowed it to work correctly for me.
 // Visit https://gist.github.com/raydwaipayan/a48ef18210ee07f8b3d34b114b395b46 (for the original file I used)
 
+// For lazy people
+// #define _SILENCE_CXX17_C_HEADER_DEPRECATION_WARNINS // or _SILENCE_CXX17_C_HEADER_DEPRECATION_WARNING
+// #define _CRT_SECURE_NO_WARNINGS 
+
 #ifndef MY_CPLUSPLUS 
 #if defined(_MSVC_LANG) && !defined(__clang__)
 #define MY_CPLUSPLUS (_MSC_VER == 1900 ? 201103L : _MSVC_LANG)
@@ -33,6 +37,8 @@
 #include <cstdlib>
 #include <cstring>
 #include <ctime>
+#include <cwchar>
+#include <cwctype>
 
 #if MY_CPLUSPLUS >= 201103L
 #include <ccomplex>
@@ -42,8 +48,7 @@
 #include <cstdbool>
 #include <cstdint>
 #include <ctgmath>
-#include <cwchar>
-#include <cwctype>
+#include <cuchar>
 #endif
 
 // C++
@@ -84,6 +89,7 @@
 #include <array>
 #include <atomic>
 #include <chrono>
+#include <codecvt>
 #include <condition_variable>
 #include <forward_list>
 #include <future>
@@ -109,7 +115,7 @@
 #if MY_CPLUSPLUS >= 201703L
 #include <any>
 #include <charconv>
-#include <execution>
+// #include <execution>
 #include <filesystem>
 #include <optional>
 #include <memory_resource>
@@ -128,6 +134,6 @@
 #include <ranges>
 #include <span>
 #include <stop_token>
-#include <syncstream>
+// #include <syncstream>
 #include <version>
 #endif
